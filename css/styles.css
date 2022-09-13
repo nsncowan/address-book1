@@ -1,0 +1,42 @@
+.hidden {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.headstuff {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 85px;
+  margin-right: 85px;
+}
+
+h1 {
+  display: 
+}
+
+.formstuff {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 85px;
+  margin-right: 85px;
+  background-color: white;
+  border: 5px ;
+  contain: content;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  display: grid;  
+}

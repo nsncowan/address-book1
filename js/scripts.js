@@ -30,15 +30,30 @@ AddressBook.prototype.deleteContact = function(id) {
 };
 
 // Business Logic for Contacts ---------
-function Contact(firstName, lastName, phoneNumber) {
+function Contact(firstName, lastName, phoneNumber, emailAddress, homeAddress) {
   this.firstName = firstName;
   this.lastName = lastName;
   this.phoneNumber = phoneNumber;
+  this.emailAddress = emailAddress;
+  this.homeAddress = homeAddress;
 }
 
-Contact.prototype.fullName = function() {
+Contact.prototype.theName = function() {
   return this.firstName + " " + this.lastName;
 };
+
+Contact.prototype.thePhone = function() {
+  return this.phoneNumber;
+};
+
+Contact.prototype.theEmail = function() {
+  return this.emailAddress;
+};
+
+Contact.prototype.theHome = function() {
+  return this.homeAddress;
+};
+
 
 // User Interface Logic ---------
 let addressBook = new AddressBook();
@@ -50,9 +65,21 @@ function listContacts(addressBookToDisplay) {
   Object.keys(addressBookToDisplay.contacts).forEach(function(key) {
     const contact = addressBookToDisplay.findContact(key);
     const li = document.createElement("li");
-    li.append(contact.fullName());
+    const li2 = document.createElement("li");
+    const li3 = document.createElement("li");
+    const li4 = document.createElement("li");
+    li.append(contact.theName());
+    li2.append(contact.thePhone());
+    li3.append(contact.theEmail());
+    li4.append(contact.theHome());
     li.setAttribute("id", contact.id);
+    li2.setAttribute("id", contact.id);
+    li3.setAttribute("id", contact.id);
+    li4.setAttribute("id", contact.id);
     ul.append(li);
+    ul.append(li2);
+    ul.append(li3);
+    ul.append(li4);
   });
   contactsDiv.append(ul);
 }
@@ -62,7 +89,9 @@ function handleFormSubmission(event) {
   const inputtedFirstName = document.querySelector("input#new-first-name").value;
   const inputtedLastName = document.querySelector("input#new-last-name").value;
   const inputtedPhoneNumber = document.querySelector("input#new-phone-number").value;
-  let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
+  const inputtedEmailAddress = document.querySelector("input#emailAddress").value;
+  const inputtedHomeAddress = document.querySelector("input#homeAddress").value;
+  let newContact = new Contact(inputtedFirstName, inputtedLastName, inputtedPhoneNumber, inputtedEmailAddress, inputtedHomeAddress);
   addressBook.addContact(newContact);
   listContacts(addressBook);
 }
