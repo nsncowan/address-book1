@@ -13,15 +13,22 @@ body {
   background-color: whitesmoke;
 }
 
+h1{
+  text-align: center;
+  font-size: 65px;
+}
+
+h2 {
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
 .headstuff {
   margin-top: 20px;
   margin-bottom: 25px;
   margin-left: 85px;
   margin-right: 85px;
-}
-
-h1 {
-  display: 
 }
 
 .formstuff {
@@ -39,4 +46,28 @@ form {
   margin: 0 auto;
   padding: 25px;
   display: grid;  
+}
+
+.hope {
+  background-color: white;
+  float: left;
+  display: block;
+  border: 5px ;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 85px;
+  margin-right: 85px;
+  padding: 25px;
+  scrollbar-width: thin;
+  scrollbar-color: 10px white white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  direction: ltr; 
+  width: 792px;
+  height: 175px;
+  list-style-position: inside;
+}
+
+li {
+  list-style: none;
 }

@@ -6,41 +6,45 @@
   <link rel="stylesheet" href="css/styles.css">
   <title>Address Book</title>
 </head>
-<body>
-  <div class=" headstuff">
-    <h1>Address Book</h1>
-    <h2>Add a Contact:</h2>
-  </div>
-  <div class="formstuff">  
-    <form id="new-contact">
-      <label for="new-first-name">First Name:</label>
-      <input type="text" id="new-first-name" name="new-first-name">
-      <br>
-      <label for="new-last-name">Last Name:</label>
-      <input type="text" id="new-last-name" name="new-last-name">
-      <br>
-      <label for="new-phone-number">Phone Number:</label>
-      <input type="text" id="new-phone-number" name="new-phone-number">
-      <br>
-      <label for="emailAddress">Email Address:</label>
-      <input type="text" id="emailAddress" name="emailAddress">
-      <br>
-      <label for="homeAddress">Home Address:</label>
-      <input type="text" id="homeAddress" name="homeAddress">
-      <br>
-      <br>
-      <button type="submit">Add</button>
-    </form>
-  </div>
+<div class="outer">
+  <body>
+    <div class=" headstuff">
+      <h1>Address Book</h1>
+      <h2>Add a Contact:</h2>
+    </div>
+    <div class="formstuff">  
+      <form id="new-contact">
+        <label for="new-first-name">First Name:</label>
+        <input type="text" id="new-first-name" name="new-first-name">
+        <br>
+        <label for="new-last-name">Last Name:</label>
+        <input type="text" id="new-last-name" name="new-last-name">
+        <br>
+        <label for="new-phone-number">Phone Number:</label>
+        <input type="text" id="new-phone-number" name="new-phone-number">
+        <br>
+        <label for="emailAddress">Email Address:</label>
+        <input type="text" id="emailAddress" name="emailAddress">
+        <br>
+        <label for="homeAddress">Home Address:</label>
+        <input type="text" id="homeAddress" name="homeAddress">
+        <br>
+        <br>
+        <button button class="btn btn-primary type="submit">Add</button>
+      </form>
+    </div>
 
-  <h2>Contacts:</h2>
-  <div id="contacts">
-  </div>
+    <div class="hope">
+      <h2>Contacts:</h2>
+      <div id="contacts">
+      </div>
 
-  <div id="contact-details" class="hidden">
-    <p>First Name: <span id="first-name"></span></p>
-    <p>Last Name: <span id="last-name"></span></p>
-    <p>Phone Number: <span id="phone-number"></span></p>
-  </div>
-</body>
+      <div id="contact-details" class="hidden">
+        <p>First Name: <span id="first-name"></span></p>
+        <p>Last Name: <span id="last-name"></span></p>
+        <p>Phone Number: <span id="phone-number"></span></p>
+      </div>
+    </div>
+  </body>
+</div>
 </html>
